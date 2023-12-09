@@ -1,0 +1,34 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": true,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "lib": ["es2020", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@vebgen/mui-rff-autocomplete": [
+                "packages/autocomplete/src/index.ts"
+            ],
+            "@vebgen/mui-rff-checkboxes": ["packages/checkboxes/src/index.ts"],
+            "@vebgen/mui-rff-core": ["packages/core/src/index.ts"],
+            "@vebgen/mui-rff-date": ["packages/date/src/index.ts"],
+            "@vebgen/mui-rff-date-time": ["packages/date-time/src/index.ts"],
+            "@vebgen/mui-rff-debug": ["packages/debug/src/index.ts"],
+            "@vebgen/mui-rff-radios": ["packages/radios/src/index.ts"],
+            "@vebgen/mui-rff-select": ["packages/select/src/index.ts"],
+            "@vebgen/mui-rff-switch": ["packages/switch/src/index.ts"],
+            "@vebgen/mui-rff-text": ["packages/text/src/index.ts"],
+            "@vebgen/mui-rff-time": ["packages/time/src/index.ts"]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
+}

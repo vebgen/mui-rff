@@ -1,0 +1,30 @@
+{
+    "name": "showcase-e2e",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "application",
+    "sourceRoot": "apps/showcase-e2e/src",
+    "targets": {
+        "e2e": {
+            "executor": "@nx/cypress:cypress",
+            "options": {
+                "cypressConfig": "apps/showcase-e2e/cypress.config.ts",
+                "testingType": "e2e",
+                "devServerTarget": "showcase:serve"
+            },
+            "configurations": {
+                "production": {
+                    "devServerTarget": "showcase:serve:production"
+                },
+                "ci": {
+                    "devServerTarget": "showcase:serve-static"
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": ["{options.outputFile}"]
+        }
+    },
+    "implicitDependencies": ["showcase"],
+    "tags": []
+}

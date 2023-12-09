@@ -7,7 +7,17 @@ This project draws its inspiration and some code from
 
 Following packages are hosted in this repository:
 
-- TBD
+- [@vebgen/mui-rff-autocomplete](./packages/autocomplete/README.md)
+- [@vebgen/mui-rff-checkboxes](./packages/checkboxes/README.md)
+- [@vebgen/mui-rff-core](./packages/core/README.md)
+- [@vebgen/mui-rff-date](./packages/date/README.md)
+- [@vebgen/mui-rff-date-time](./packages/date-time/README.md)
+- [@vebgen/mui-rff-debug](./packages/debug/README.md)
+- [@vebgen/mui-rff-radios](./packages/radios/README.md)
+- [@vebgen/mui-rff-select](./packages/select/README.md)
+- [@vebgen/mui-rff-switch](./packages/switch/README.md)
+- [@vebgen/mui-rff-text](./packages/text/README.md)
+- [@vebgen/mui-rff-time](./packages/time/README.md)
 
 ## Managing the Workspace
 

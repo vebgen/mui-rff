@@ -1,7 +1,8 @@
 # checkboxes
 
-This library was generated with [Nx](https://nx.dev).
+A component consisting of check-boxes that you can use in a React-Final-Form.
 
 ## Running unit tests
 
-Run `nx test checkboxes` to execute the unit tests via [Jest](https://jestjs.io).
+Run `pnpm nx test checkboxes` to execute the unit tests via
+[Jest](https://jestjs.io).

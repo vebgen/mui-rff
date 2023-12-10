@@ -3,25 +3,21 @@ import { StoryFn, Meta } from '@storybook/react';
 import { ContainerForm } from '@vebgen/mui-rff-debug';
 import { showErrorOnBlur, showErrorOnChange } from '@vebgen/mui-rff-core';
 
-import type { SelectProps } from './component';
-import { Select } from './component';
+import type { SwitchProps } from './component';
+import { Switch } from './component';
 
 
 // The properties passed to each story.
-type StoryProps = SelectProps;
+type StoryProps = SwitchProps;
 
 
 // Common configuration for all stories.
 const storybookConfig: Meta<StoryProps> = {
-    title: 'components/Select',
-    tags: ['select'],
-    component: Select,
+    title: 'components/Switch',
+    tags: ['switch'],
+    component: Switch,
     args: {
-        name: "select",
-        label: "Select",
-        required: true,
-        multiple: false,
-        helperText: "Select a value from the list.",
+        name: "switch",
         data: [
             {
                 label: "One",
@@ -37,6 +33,9 @@ const storybookConfig: Meta<StoryProps> = {
                 disabled: true,
             }
         ],
+        label: "The tile",
+        required: true,
+        helperText: "This is an alleged switch",
         showError: showErrorOnChange,
     },
     argTypes: {
@@ -53,13 +52,28 @@ export default storybookConfig;
 
 
 // Base for all stories in this file.
-const Template: StoryFn<StoryProps> = ({ name, ...rest }) => (
+const Template: StoryFn<StoryProps> = (rest) => (
     <ContainerForm>
-        <Select name={name} {...rest} />
+        <Switch {...rest} />
     </ContainerForm>
 );
 
 
-// Only one story.
-export const Default: StoryFn<StoryProps> = Template.bind({});
-Default.args = {};
+// Multiple switches.
+export const Multiple: StoryFn<StoryProps> = Template.bind({});
+Multiple.args = {
+    helperText: "The value is an array collected from data values",
+};
+
+
+// A single switch.
+export const Single: StoryFn<StoryProps> = Template.bind({});
+Single.args = {
+    label: undefined,
+    data: {
+        label: "One",
+        value: "1",
+        disabled: true
+    },
+    helperText: "The filed value is a boolean in this case",
+};

@@ -13,8 +13,8 @@ type StoryProps = TimePickerProps;
 
 // Common configuration for all stories.
 const storybookConfig: Meta<StoryProps> = {
-    title: 'components/Text',
-    tags: ['text'],
+    title: 'components/Time',
+    tags: ['time'],
     component: TimePicker,
     args: {
         name: "theTime",

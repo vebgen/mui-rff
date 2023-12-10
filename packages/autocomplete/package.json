@@ -1,6 +1,6 @@
 {
     "name": "@vebgen/mui-rff-autocomplete",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "An auto-complete component that you can use in a React-Final-Form.",
     "private": false,
     "repository": {
@@ -29,11 +29,11 @@
     "peerDependencies": {
         "react": "18.2.0",
         "react-dom": "18.2.0",
-        "core-js": "^3.6.5"
+        "core-js": "^3.34.0"
     },
     "dependencies": {
         "@mui/material": "^5.14.20",
-        "@vebgen/mui-rff-core": "^0.0.4",
+        "@vebgen/mui-rff-core": "^0.0.5",
         "react-final-form": "^6.5.9"
     }
 }

@@ -3,24 +3,40 @@ import { StoryFn, Meta } from '@storybook/react';
 import { ContainerForm } from '@vebgen/mui-rff-debug';
 import { showErrorOnBlur, showErrorOnChange } from '@vebgen/mui-rff-core';
 
-import type { TextProps } from './component';
-import { Text } from './component';
-import { TYPE_TEXT } from './definitions';
+import type { SelectProps } from './component';
+import { Select } from './component';
 
 
 // The properties passed to each story.
-type StoryProps = TextProps;
+type StoryProps = SelectProps;
 
 
 // Common configuration for all stories.
 const storybookConfig: Meta<StoryProps> = {
     title: 'components/Text',
     tags: ['text'],
-    component: Text,
+    component: Select,
     args: {
-        name: "text",
-        type: TYPE_TEXT,
-        fieldProps: {},
+        name: "select",
+        label: "Select",
+        required: true,
+        multiple: false,
+        helperText: "Select a value from the list.",
+        data: [
+            {
+                label: "One",
+                value: "1",
+            },
+            {
+                label: "Two",
+                value: "2",
+            },
+            {
+                label: "Three",
+                value: "3",
+                disabled: true,
+            }
+        ],
         showError: showErrorOnChange,
     },
     argTypes: {
@@ -37,20 +53,9 @@ export default storybookConfig;
 
 
 // Base for all stories in this file.
-const Template: StoryFn<StoryProps> = ({name, ...rest}) => (
-    <ContainerForm validate={(values: any) => {
-        console.log('ContainerForm onValidate with %O', values);
-
-        const errors: Record<string, string> = {};
-        if (!values[name]) {
-            errors[name] = 'Required';
-        } else if (values[name] === '000') {
-            errors[name] = '000 is not a valid value';
-        }
-        return errors;
-    }}>
-        <Text name={name} {...rest} />
-        <p>Type 000 to see an error.</p>
+const Template: StoryFn<StoryProps> = ({ name, ...rest }) => (
+    <ContainerForm>
+        <Select name={name} {...rest} />
     </ContainerForm>
 );
 
@@ -58,4 +63,3 @@ const Template: StoryFn<StoryProps> = ({name, ...rest}) => (
 // Only one story.
 export const Default: StoryFn<StoryProps> = Template.bind({});
 Default.args = {};
-

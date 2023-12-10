@@ -17,5 +17,6 @@ export {
     TYPE_TIME,
     TYPE_WEEK,
     TYPE_COLOR,
-    TEXT_FIELD_TYPE,
 } from './definitions';
+
+export type { TEXT_FIELD_TYPE } from './definitions';

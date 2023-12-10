@@ -23,9 +23,12 @@ importers:
       '@mui/material':
         specifier: ^5.14.20
         version: 5.14.20(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
+      '@mui/system':
+        specifier: ^5.14.20
+        version: 5.14.20(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react@18.2.0)
       '@mui/x-date-pickers':
         specifier: ^6.18.4
-        version: 6.18.4(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.14.20)(@mui/system@5.14.20)(@types/react@18.2.43)(luxon@3.4.4)(react-dom@18.2.0)(react@18.2.0)
+        version: 6.18.4(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.14.20)(@mui/system@5.14.20)(@types/react@18.2.43)(date-fns@2.30.0)(luxon@3.4.4)(react-dom@18.2.0)(react@18.2.0)
       '@reduxjs/toolkit':
         specifier: ^2.0.1
         version: 2.0.1(react-redux@9.0.2)(react@18.2.0)
@@ -35,6 +38,9 @@ importers:
       core-js:
         specifier: ^3.34.0
         version: 3.34.0
+      date-fns:
+        specifier: ^2.30.0
+        version: 2.30.0
       final-form:
         specifier: ^4.20.10
         version: 4.20.10
@@ -2818,7 +2824,7 @@ packages:
       react: 18.2.0
       react-is: 18.2.0
 
-  /@mui/x-date-pickers@6.18.4(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.14.20)(@mui/system@5.14.20)(@types/react@18.2.43)(luxon@3.4.4)(react-dom@18.2.0)(react@18.2.0):
+  /@mui/x-date-pickers@6.18.4(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.14.20)(@mui/system@5.14.20)(@types/react@18.2.43)(date-fns@2.30.0)(luxon@3.4.4)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-YqJ6lxZHBIt344B3bvRAVbdYSQz4dcmJQXGcfvJTn26VdKjpgzjAqwhlbQhbAt55audJOWzGB99ImuQuljDROA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -2864,6 +2870,7 @@ packages:
       '@mui/utils': 5.14.20(@types/react@18.2.43)(react@18.2.0)
       '@types/react-transition-group': 4.4.10
       clsx: 2.0.0
+      date-fns: 2.30.0
       luxon: 3.4.4
       prop-types: 15.8.1
       react: 18.2.0
@@ -8914,6 +8921,13 @@ packages:
       whatwg-mimetype: 3.0.0
       whatwg-url: 12.0.1
     dev: true
+
+  /date-fns@2.30.0:
+    resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
+    engines: {node: '>=0.11'}
+    dependencies:
+      '@babel/runtime': 7.23.5
+    dev: false
 
   /dayjs@1.11.10:
     resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}

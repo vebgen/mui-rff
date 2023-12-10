@@ -310,8 +310,11 @@ importers:
         specifier: ^5.14.20
         version: 5.14.20(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: ^0.0.1
+        specifier: ^0.0.3
         version: link:../../dist/packages/core
+      core-js:
+        specifier: ^3.6.5
+        version: 3.34.0
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -329,8 +332,11 @@ importers:
         specifier: ^5.14.20
         version: 5.14.20(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: ^0.0.1
+        specifier: ^0.0.3
         version: link:../../dist/packages/core
+      core-js:
+        specifier: ^3.6.5
+        version: 3.34.0
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -347,9 +353,9 @@ importers:
       '@mui/material':
         specifier: ^5.14.20
         version: 5.14.20(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
-      '@vebgen/mui-rff-core':
-        specifier: ^0.0.1
-        version: link:../../dist/packages/core
+      core-js:
+        specifier: ^3.6.5
+        version: 3.34.0
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -370,8 +376,11 @@ importers:
         specifier: ^6.18.4
         version: 6.18.4(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.14.20)(@mui/system@5.14.20)(@types/react@18.2.43)(date-fns@2.30.0)(luxon@3.4.4)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: ^0.0.1
+        specifier: ^0.0.3
         version: link:../../dist/packages/core
+      core-js:
+        specifier: ^3.6.5
+        version: 3.34.0
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -392,8 +401,11 @@ importers:
         specifier: ^6.18.4
         version: 6.18.4(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.14.20)(@mui/system@5.14.20)(@types/react@18.2.43)(date-fns@2.30.0)(luxon@3.4.4)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: ^0.0.1
+        specifier: ^0.0.3
         version: link:../../dist/packages/core
+      core-js:
+        specifier: ^3.6.5
+        version: 3.34.0
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -414,8 +426,11 @@ importers:
         specifier: ^3.2.3
         version: 3.2.3(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.14.20)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: ^0.0.1
+        specifier: ^0.0.3
         version: link:../../dist/packages/core
+      core-js:
+        specifier: ^3.6.5
+        version: 3.34.0
       final-form-arrays:
         specifier: ^3.1.0
         version: 3.1.0(final-form@4.20.10)
@@ -436,8 +451,11 @@ importers:
         specifier: ^5.14.20
         version: 5.14.20(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: ^0.0.1
+        specifier: ^0.0.3
         version: link:../../dist/packages/core
+      core-js:
+        specifier: ^3.6.5
+        version: 3.34.0
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -455,8 +473,11 @@ importers:
         specifier: ^5.14.20
         version: 5.14.20(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: ^0.0.1
+        specifier: ^0.0.3
         version: link:../../dist/packages/core
+      core-js:
+        specifier: ^3.6.5
+        version: 3.34.0
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -474,8 +495,11 @@ importers:
         specifier: ^5.14.20
         version: 5.14.20(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: ^0.0.1
+        specifier: ^0.0.3
         version: link:../../dist/packages/core
+      core-js:
+        specifier: ^3.6.5
+        version: 3.34.0
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -493,8 +517,11 @@ importers:
         specifier: ^5.14.20
         version: 5.14.20(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: ^0.0.1
+        specifier: ^0.0.3
         version: link:../../dist/packages/core
+      core-js:
+        specifier: ^3.6.5
+        version: 3.34.0
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -515,8 +542,11 @@ importers:
         specifier: ^6.18.4
         version: 6.18.4(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/material@5.14.20)(@mui/system@5.14.20)(@types/react@18.2.43)(date-fns@2.30.0)(luxon@3.4.4)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: ^0.0.1
+        specifier: ^0.0.3
         version: link:../../dist/packages/core
+      core-js:
+        specifier: ^3.6.5
+        version: 3.34.0
       react:
         specifier: 18.2.0
         version: 18.2.0

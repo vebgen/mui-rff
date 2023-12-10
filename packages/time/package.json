@@ -1,6 +1,6 @@
 {
     "name": "@vebgen/mui-rff-time",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A time component that you can use in a React-Final-Form.",
     "private": false,
     "repository": {
@@ -35,7 +35,7 @@
     "dependencies": {
         "@mui/x-date-pickers": "^6.18.4",
         "@mui/material": "^5.14.20",
-        "@vebgen/mui-rff-core": "^0.0.3",
+        "@vebgen/mui-rff-core": "^0.0.4",
         "react-final-form": "^6.5.9"
     }
 }

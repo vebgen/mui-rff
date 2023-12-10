@@ -2,7 +2,7 @@
 
 Material-UI components for React Final Form.
 
-This project draws its inspiration and some code from
+This project draws its inspiration and a lot of code from
 [lookfirst's mui-rff](https://lookfirst.github.io/mui-rff/) package.
 
 Following packages are hosted in this repository:

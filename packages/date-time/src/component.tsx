@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import {
-    DateTimePicker as MuiDateTimePicker,
     DateTimePickerProps as MuiDateTimePickerProps,
 } from '@mui/x-date-pickers';
 import { TextFieldProps } from '@mui/material/TextField';

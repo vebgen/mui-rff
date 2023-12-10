@@ -1,5 +1,38 @@
 {
     "name": "@vebgen/mui-rff-autocomplete",
     "version": "0.0.1",
-    "description": "An auto-complete component that you can use in a React-Final-Form."
+    "description": "An auto-complete component that you can use in a React-Final-Form.",
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vebgen/mui-rff.git",
+        "directory": "packages/autocomplete"
+    },
+    "bugs": {
+        "url": "https://github.com/vebgen/mui-rff/issues"
+    },
+    "homepage": "https://github.com/vebgen/mui-rff",
+    "license": "MIT",
+    "keywords": [
+        "react",
+        "react-component",
+        "react-final-form",
+        "material-ui",
+        "mui",
+        "autocomplete",
+        "combobox"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "directory": "../../dist/packages/autocomplete"
+    },
+    "peerDependencies": {
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "dependencies": {
+        "@mui/material": "^5.14.20",
+        "@vebgen/mui-rff-core": "^0.0.1",
+        "react-final-form": "^6.5.9"
+    }
 }

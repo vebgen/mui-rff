@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
         "cacheable",
+        "combobox",
+        "datepicker",
         "DATETIME",
         "devkit",
         "lookfirst's",
@@ -9,6 +11,7 @@
         "storysource",
         "svgr",
         "textea",
+        "timepicker",
         "vebgen",
         "yournamespace"
     ]

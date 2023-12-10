@@ -1,5 +1,39 @@
 {
     "name": "@vebgen/mui-rff-debug",
     "description": "Components that may be useful for debugging your react-final-form",
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vebgen/mui-rff.git",
+        "directory": "packages/debug"
+    },
+    "bugs": {
+        "url": "https://github.com/vebgen/mui-rff/issues"
+    },
+    "homepage": "https://github.com/vebgen/mui-rff",
+    "license": "MIT",
+    "keywords": [
+        "react",
+        "react-component",
+        "react-final-form",
+        "material-ui",
+        "mui",
+        "debug"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "directory": "../../dist/packages/debug"
+    },
+    "peerDependencies": {
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "dependencies": {
+        "@textea/json-viewer": "^3.2.3",
+        "final-form-arrays": "^3.1.0",
+        "@mui/material": "^5.14.20",
+        "@vebgen/mui-rff-core": "^0.0.1",
+        "react-final-form": "^6.5.9"
+    }
 }

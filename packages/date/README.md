@@ -1,6 +1,6 @@
 # date
 
-An date component that you can use in a React-Final-Form.
+A date component that you can use in a React-Final-Form.
 
 ## Running unit tests
 

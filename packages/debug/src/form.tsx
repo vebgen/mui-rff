@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import arrayMutators from 'final-form-arrays';
-import { Form } from 'react-final-form';
+import { Form, FormProps } from 'react-final-form';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon';
 
@@ -11,16 +11,14 @@ import { Box, Button, ButtonGroup } from '@mui/material';
 /**
  * Properties expected by the ContainerForm components.
  */
-export type ContainerFormProps = {
+export interface ContainerFormProps
+    extends Omit<FormProps, "render"> {
+
     /**
      * A node to be rendered in the form.
      */
     children?: ReactNode;
 
-    /**
-     * Pass initial values to inner form.
-     */
-    initialValues?: Record<string, any>;
 };
 
 
@@ -61,7 +59,7 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 /**
  * Handler for form submission.
  */
-const onSubmit = async (values: Record<string, string>) => {
+const onSubmitDefault = async (values: Record<string, string>) => {
     console.trace();
     console.log('ContainerForm debug onSubmit with %O', values);
     await sleep(300);
@@ -75,6 +73,9 @@ const onSubmit = async (values: Record<string, string>) => {
 export const ContainerForm = ({
     children,
     initialValues = undefined,
+    onSubmit = onSubmitDefault,
+    mutators = undefined,
+    ...rest
 }: ContainerFormProps) => (
     <LocalizationProvider dateAdapter={AdapterLuxon}>
         <Form
@@ -82,7 +83,9 @@ export const ContainerForm = ({
             initialValues={initialValues}
             mutators={{
                 ...arrayMutators,
+                ...mutators
             }}
+            {...rest}
             render={({ handleSubmit, form, submitting, pristine }) => (
                 <form onSubmit={handleSubmit}>
                     <Box sx={sxBox}>

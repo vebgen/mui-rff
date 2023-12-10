@@ -86,8 +86,6 @@ const Template: StoryFn<StoryProps> = (args) => (
 );
 
 
-/**
- * The form is empty.
- */
-export const WithoutInitialValues: StoryFn<StoryProps> = Template.bind({});
-WithoutInitialValues.args = {};
+// Only one story.
+export const Default: StoryFn<StoryProps> = Template.bind({});
+Default.args = {};

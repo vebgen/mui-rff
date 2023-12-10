@@ -1,6 +1,6 @@
 {
     "name": "@vebgen/mui-rff-core",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "Common code for all packages implementing React-Final-Form components.",
     "private": false,
     "repository": {
@@ -32,7 +32,6 @@
     },
     "dependencies": {
         "@mui/material": "^5.14.20",
-        "@vebgen/mui-rff-core": "^0.0.1",
         "react-final-form": "^6.5.9"
     }
 }

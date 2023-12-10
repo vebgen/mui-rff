@@ -1,6 +1,6 @@
 {
     "name": "@vebgen/mui-rff-select",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "A component that allows selecting a value amongst a list, that you can use in a React-Final-Form.",
     "private": false,
     "repository": {
@@ -32,7 +32,7 @@
     },
     "dependencies": {
         "@mui/material": "^5.14.20",
-        "@vebgen/mui-rff-core": "^0.0.1",
+        "@vebgen/mui-rff-core": "^0.0.3",
         "react-final-form": "^6.5.9"
     }
 }

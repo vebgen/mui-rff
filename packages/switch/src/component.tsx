@@ -49,7 +49,7 @@ export interface SwitchData extends Partial<Omit<MuiSwitchProps, 'onChange'>> {
 
 
 /**
- * The properties expected by this control.
+ * The properties expected by the Switch control.
  */
 export type SwitchProps = {
     /**
@@ -119,7 +119,7 @@ export type SwitchProps = {
 
 
 /**
- * A group of radio controls.
+ * A group of on/off controls or a single such.
  */
 export function Switch({
     name,

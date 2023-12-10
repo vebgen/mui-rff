@@ -17,7 +17,6 @@
                 "tsConfig": "packages/checkboxes/tsconfig.lib.json",
                 "project": "packages/checkboxes/package.json",
                 "entryFile": "packages/checkboxes/src/index.ts",
-                "external": ["react", "react-dom", "react/jsx-runtime"],
                 "rollupConfig": "@nx/react/plugins/bundle-rollup",
                 "compiler": "babel",
                 "assets": [
@@ -26,7 +25,12 @@
                         "input": ".",
                         "output": "."
                     }
-                ]
+                ],
+                "main": "packages/checkboxes/src/index.ts",
+                "generateExportsField": true,
+                "external": "all",
+                "format": ["esm", "cjs"],
+                "updateBuildableProjectDepsInPackageJson": true
             }
         },
         "test": {

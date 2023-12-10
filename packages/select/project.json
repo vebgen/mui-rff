@@ -17,7 +17,6 @@
                 "tsConfig": "packages/select/tsconfig.lib.json",
                 "project": "packages/select/package.json",
                 "entryFile": "packages/select/src/index.ts",
-                "external": ["react", "react-dom", "react/jsx-runtime"],
                 "rollupConfig": "@nx/react/plugins/bundle-rollup",
                 "compiler": "babel",
                 "assets": [
@@ -26,7 +25,12 @@
                         "input": ".",
                         "output": "."
                     }
-                ]
+                ],
+                "main": "packages/select/src/index.ts",
+                "generateExportsField": true,
+                "external": "all",
+                "format": ["esm", "cjs"],
+                "updateBuildableProjectDepsInPackageJson": true
             }
         },
         "test": {

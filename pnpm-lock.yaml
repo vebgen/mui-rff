@@ -316,7 +316,7 @@ importers:
         specifier: ^5.15.5
         version: 5.15.5(@emotion/react@11.11.3)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.6
+        specifier: 0.0.7
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.35.0
@@ -338,7 +338,7 @@ importers:
         specifier: ^5.15.5
         version: 5.15.5(@emotion/react@11.11.3)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.6
+        specifier: 0.0.7
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.35.0
@@ -360,7 +360,7 @@ importers:
         specifier: ^5.15.5
         version: 5.15.5(@emotion/react@11.11.3)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.6
+        specifier: 0.0.7
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.35.0
@@ -404,7 +404,7 @@ importers:
         specifier: ^6.19.0
         version: 6.19.0(@emotion/react@11.11.3)(@emotion/styled@11.11.0)(@mui/material@5.15.5)(@mui/system@5.15.5)(@types/react@18.2.43)(date-fns@2.30.0)(luxon@3.4.4)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.6
+        specifier: 0.0.7
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.35.0
@@ -429,7 +429,7 @@ importers:
         specifier: ^6.19.0
         version: 6.19.0(@emotion/react@11.11.3)(@emotion/styled@11.11.0)(@mui/material@5.15.5)(@mui/system@5.15.5)(@types/react@18.2.43)(date-fns@2.30.0)(luxon@3.4.4)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.6
+        specifier: 0.0.7
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.35.0
@@ -457,7 +457,7 @@ importers:
         specifier: ^3.3.0
         version: 3.3.0(@emotion/react@11.11.3)(@emotion/styled@11.11.0)(@mui/material@5.15.5)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.6
+        specifier: 0.0.7
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.35.0
@@ -482,7 +482,7 @@ importers:
         specifier: ^5.15.5
         version: 5.15.5(@emotion/react@11.11.3)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.6
+        specifier: 0.0.7
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.35.0
@@ -504,7 +504,7 @@ importers:
         specifier: ^5.15.5
         version: 5.15.5(@emotion/react@11.11.3)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.6
+        specifier: 0.0.7
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.35.0
@@ -526,7 +526,7 @@ importers:
         specifier: ^5.15.5
         version: 5.15.5(@emotion/react@11.11.3)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.6
+        specifier: 0.0.7
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.35.0
@@ -548,7 +548,7 @@ importers:
         specifier: ^5.15.5
         version: 5.15.5(@emotion/react@11.11.3)(@emotion/styled@11.11.0)(@types/react@18.2.43)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.6
+        specifier: 0.0.7
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.35.0
@@ -573,7 +573,7 @@ importers:
         specifier: ^6.19.0
         version: 6.19.0(@emotion/react@11.11.3)(@emotion/styled@11.11.0)(@mui/material@5.15.5)(@mui/system@5.15.5)(@types/react@18.2.43)(date-fns@2.30.0)(luxon@3.4.4)(react-dom@18.2.0)(react@18.2.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.6
+        specifier: 0.0.7
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.35.0

@@ -1,6 +1,6 @@
 {
     "name": "@vebgen/mui-rff-core",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Common code for all packages implementing React-Final-Form components.",
     "private": false,
     "repository": {
@@ -26,12 +26,10 @@
         "directory": "../../dist/packages/core"
     },
     "peerDependencies": {
-        "react": "18.2.0",
+        "@mui/material": "^5.15.5",
+        "core-js": "^3.35.0",
         "react-dom": "18.2.0",
-        "core-js": "^3.34.0"
-    },
-    "dependencies": {
-        "@mui/material": "^5.14.20",
-        "react-final-form": "^6.5.9"
+        "react-final-form": "^6.5.9",
+        "react": "18.2.0"
     }
 }

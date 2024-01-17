@@ -8,8 +8,8 @@ describe('App', () => {
         expect(baseElement).toBeTruthy();
     });
 
-    it('should have a greeting as the title', () => {
+    it('should show the branding', () => {
         const { getByText } = render(<App />);
-        expect(getByText(/Welcome showcase/gi)).toBeTruthy();
+        expect(getByText(/MUI-RFF Github Project/gi)).toBeTruthy();
     });
 });

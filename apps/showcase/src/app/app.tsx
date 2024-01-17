@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'date-fns';
+import { DateTime } from 'luxon';
 import {
     AppBar,
     Box,
@@ -19,9 +19,9 @@ import { FormSubscription } from 'final-form';
 import {
     StyledEngineProvider, ThemeProvider, createTheme
 } from '@mui/material/styles';
-import { createFilterOptions } from '@mui/material/useAutocomplete';
+import { createFilterOptions } from '@mui/material/Autocomplete';
 import { styled } from '@mui/system';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { AdapterLuxon } from '@mui/x-date-pickers/AdapterLuxon';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { Autocomplete, AutocompleteData } from '@vebgen/mui-rff-autocomplete';
 import { CheckboxData, Checkboxes } from '@vebgen/mui-rff-checkboxes';
@@ -75,16 +75,16 @@ interface FormData {
     available: boolean;
     switch: string[];
     terms: boolean;
-    date: Date;
+    date: DateTime;
     hello: string;
     cities: string[];
     gender: string;
-    birthday: Date;
-    break: Date;
+    birthday: DateTime;
+    break: DateTime;
     hidden: string;
-    keyboardDateTime: Date;
-    dateTime: Date;
-    dateTimeLocale: Date;
+    keyboardDateTime: DateTime;
+    dateTime: DateTime;
+    dateTimeLocale: DateTime;
     firstName: string;
     lastName: string;
 }
@@ -148,7 +148,6 @@ function App() {
     );
 }
 
-const Offset = styled('div')(({ theme }) => (theme.mixins as any).toolbar);
 
 function Footer() {
     return (
@@ -166,7 +165,7 @@ function Footer() {
                     >
                         <Grid item>
                             <Link
-                                href="https://github.com/lookfirst/mui-rff"
+                                href="https://github.com/vebgen/mui-rff"
                                 target="_blank"
                                 color="textSecondary"
                                 underline="hover"
@@ -178,7 +177,7 @@ function Footer() {
                     </Grid>
                 </Toolbar>
             </AppBar>
-            <Offset />
+            <Toolbar />
         </>
     );
 }
@@ -188,6 +187,10 @@ const validate = (values: FormData) => {
     return {};
 }
 
+interface AppAutoData extends AutocompleteData {
+    label: string;
+    value: string;
+}
 
 const PaperInner = styled(Paper)(({ theme }) => ({
     marginLeft: theme.spacing(3),
@@ -200,7 +203,7 @@ function MainForm({ subscription }: { subscription: any }) {
         submittedValues, setSubmittedValues
     ] = useState<FormData | undefined>(undefined);
 
-    const autocompleteData: AutocompleteData[] = [
+    const autocompleteData: AppAutoData[] = [
         { label: 'Earth', value: 'earth' },
         { label: 'Mars', value: 'mars' },
         { label: 'Venus', value: 'venus' },
@@ -241,16 +244,16 @@ function MainForm({ subscription }: { subscription: any }) {
         switch: ['bar'],
         available: false,
         terms: false,
-        date: new Date('2014-08-18T21:11:54'),
+        date: DateTime.fromISO('2014-08-18T21:11:54'),
         hello: 'some text',
         cities: ['losangeles'],
         gender: '',
-        birthday: new Date('2014-08-18'),
-        break: new Date('2019-04-20T16:20:00'),
+        birthday: DateTime.fromISO('2014-08-18'),
+        break: DateTime.fromISO('2019-04-20T16:20:00'),
         hidden: 'secret',
-        keyboardDateTime: new Date('2017-06-21T17:20:00'),
-        dateTime: new Date('2023-05-25T12:29:10'),
-        dateTimeLocale: new Date('2023-04-26T12:29:10'),
+        keyboardDateTime: DateTime.fromISO('2017-06-21T17:20:00'),
+        dateTime: DateTime.fromISO('2023-05-25T12:29:10'),
+        dateTimeLocale: DateTime.fromISO('2023-04-26T12:29:10'),
         firstName: '',
         lastName: '',
     };
@@ -265,12 +268,12 @@ function MainForm({ subscription }: { subscription: any }) {
 
     const helperText = '* Required';
 
-    const filter = createFilterOptions<AutocompleteData>();
+    const filter = createFilterOptions<AppAutoData>();
 
     let key = 0;
 
     const formFields = [
-        <Autocomplete
+        <Autocomplete<AppAutoData, false, false, true>
             key={key++}
             label="Choose one planet"
             name="planet_one"
@@ -279,9 +282,9 @@ function MainForm({ subscription }: { subscription: any }) {
             options={autocompleteData}
             getOptionValue={(option) => option.value}
             getOptionLabel={(
-                option: string | AutocompleteData
-            ) => (option as AutocompleteData).label}
-            renderOption={(props, option) => <li {...props}>{option.label}</li>}
+                option: string | AppAutoData
+            ) => (option as AppAutoData).label}
+            renderOption={(props: any, option: AppAutoData) => <li {...props}>{option.label}</li>}
             disableCloseOnSelect={true}
             helperText={helperText}
             freeSolo={true}
@@ -298,7 +301,7 @@ function MainForm({ subscription }: { subscription: any }) {
                     });
                 }
             }}
-            filterOptions={(options, params) => {
+            filterOptions={(options: AppAutoData[], params: any) => {
                 const filtered = filter(options, params);
 
                 // Suggest the creation of a new value
@@ -316,7 +319,7 @@ function MainForm({ subscription }: { subscription: any }) {
             clearOnBlur
             handleHomeEndKeys
         />,
-        <Autocomplete
+        <Autocomplete<AppAutoData, true, false, true>
             key={key++}
             label="Choose at least one planet"
             name="planet"
@@ -328,7 +331,9 @@ function MainForm({ subscription }: { subscription: any }) {
                 option: string | AutocompleteData
             ) => (option as AutocompleteData).label}
             disableCloseOnSelect={true}
-            renderOption={(props, option, { selected }) =>
+            renderOption={(
+                props: any, option: AppAutoData, { selected }: { selected: boolean }
+            ) =>
                 option.inputValue ? (
                     option.label
                 ) : (
@@ -356,7 +361,7 @@ function MainForm({ subscription }: { subscription: any }) {
                     });
                 }
             }}
-            filterOptions={(options, params) => {
+            filterOptions={(options: AppAutoData[], params: any) => {
                 const filtered = filter(options, params);
 
                 // Suggest the creation of a new value
@@ -493,94 +498,98 @@ function MainForm({ subscription }: { subscription: any }) {
     ];
 
     return (
-        <Paper sx={{ marginTop: 3, padding: 3, marginBottom: 5 }}>
-            <Form
-                onSubmit={onSubmit}
-                initialValues={
-                    submittedValues ? submittedValues : initialValues
-                }
-                subscription={subscription}
-                validate={validate}
-                key={subscription as any}
-                render={({ handleSubmit, submitting }) => (
-                    <form
-                        onSubmit={handleSubmit}
-                        noValidate={true}
-                        autoComplete="new-password"
-                    >
-                        <Grid container>
-                            <Grid item xs={6}>
-                                <LocalizationProvider
-                                    dateAdapter={AdapterDateFns}
-                                >
+        <LocalizationProvider
+            dateAdapter={AdapterLuxon}
+        >
+            <Paper sx={{ marginTop: 3, padding: 3, marginBottom: 5 }}>
+                <Form
+                    onSubmit={onSubmit}
+                    initialValues={
+                        submittedValues ? submittedValues : initialValues
+                    }
+                    subscription={subscription}
+                    validate={validate}
+                    key={subscription as any}
+                    render={({ handleSubmit, submitting }) => (
+                        <form
+                            onSubmit={handleSubmit}
+                            noValidate={true}
+                            autoComplete="new-password"
+                        >
+                            <Grid container>
+                                <Grid item xs={6}>
                                     {formFields.map((field, index) => (
                                         <Grid item key={index}>
                                             {field}
                                         </Grid>
                                     ))}
-                                </LocalizationProvider>
-                                <Grid item>
-                                    <Button
-                                        type="button"
-                                        variant="contained"
-                                        onClick={onReset}
-                                        disabled={submitting}
-                                        sx={{ mt: 3, mr: 1 }}
-                                        color="inherit"
-                                    >
-                                        Reset
-                                    </Button>
-                                    <Button
-                                        variant="contained"
-                                        type="submit"
-                                        disabled={submitting}
-                                        sx={{ mt: 3, mr: 1 }}
-                                    >
-                                        Submit
-                                    </Button>
+                                    <Grid item>
+                                        <Button
+                                            type="button"
+                                            variant="contained"
+                                            onClick={onReset}
+                                            disabled={submitting}
+                                            sx={{ mt: 3, mr: 1 }}
+                                            color="inherit"
+                                        >
+                                            Reset
+                                        </Button>
+                                        <Button
+                                            variant="contained"
+                                            type="submit"
+                                            disabled={submitting}
+                                            sx={{ mt: 3, mr: 1 }}
+                                        >
+                                            Submit
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Grid item>
+                                        <Paper sx={{
+                                            ml: 3, mt: 3, p: 3
+                                        }} elevation={3}
+                                        >
+                                            <Typography>
+                                                <strong>Render count:</strong>
+                                                <RenderCount />
+                                            </Typography>
+                                        </Paper>
+                                    </Grid>
+                                    <Grid item>
+                                        <PaperInner elevation={3}>
+                                            <Typography>
+                                                <strong>Form field data</strong>
+                                            </Typography>
+                                            <FormDebugger />
+                                        </PaperInner>
+                                    </Grid>
+                                    <Grid item>
+                                        <PaperInner elevation={3}>
+                                            <Typography>
+                                                <strong>Submitted data</strong>
+                                            </Typography>
+                                            <pre>
+                                                {
+                                                    JSON.stringify(
+                                                        submittedValues
+                                                            ? submittedValues
+                                                            : {}, undefined, 2
+                                                    )
+                                                }
+                                            </pre>
+                                        </PaperInner>
+                                    </Grid>
                                 </Grid>
                             </Grid>
-                            <Grid item xs={6}>
-                                <Grid item>
-                                    <Paper sx={{
-                                        ml: 3, mt: 3, p: 3
-                                    }} elevation={3}
-                                    >
-                                        <Typography>
-                                            <strong>Render count:</strong>
-                                            <RenderCount />
-                                        </Typography>
-                                    </Paper>
-                                </Grid>
-                                <Grid item>
-                                    <PaperInner elevation={3}>
-                                        <Typography>
-                                            <strong>Form field data</strong>
-                                        </Typography>
-                                        <FormDebugger />
-                                    </PaperInner>
-                                </Grid>
-                                <Grid item>
-                                    <PaperInner elevation={3}>
-                                        <Typography>
-                                            <strong>Submitted data</strong>
-                                        </Typography>
-                                        <pre>
-                                            {
-                                                JSON.stringify(
-                                                    submittedValues
-                                                        ? submittedValues
-                                                        : {}, undefined, 2
-                                                )
-                                            }
-                                        </pre>
-                                    </PaperInner>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </form>
-                )}
-            />
-        </Paper>
+
+                        </form>
+                    )}
+                />
+            </Paper>
+        </LocalizationProvider >
     );
 }
+
+
+export default App;

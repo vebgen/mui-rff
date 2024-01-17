@@ -1,5 +1,5 @@
 import { FormSpy } from 'react-final-form';
-import { JsonViewer, defineDataType } from '@textea/json-viewer'
+import { JsonViewer, defineDataType } from '@textea/json-viewer';
 
 // Subscribe form to values.
 const config = {

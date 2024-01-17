@@ -1,0 +1,113 @@
+{
+    "name": "buttons",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/buttons/src",
+    "projectType": "library",
+    "tags": [],
+    "targets": {
+        "translate": {
+            "executor": "nx:run-commands",
+            "options": {
+                "commands": [
+                    "g11n-cli update {projectRoot}/src {projectRoot}/i18n"
+                ],
+                "parallel": false
+            },
+            "inputs": [
+                "^tsFiles"
+            ],
+            "outputs": [
+                "{projectRoot}/i18n"
+            ]
+        },
+        "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": ["{options.outputFile}"]
+        },
+        "build": {
+            "executor": "@nx/rollup:rollup",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "outputPath": "dist/packages/buttons",
+                "tsConfig": "packages/buttons/tsconfig.lib.json",
+                "project": "packages/buttons/package.json",
+                "entryFile": "packages/buttons/src/index.ts",
+                "external": "all",
+                "format": ["esm", "cjs"],
+                "rollupConfig": "@nx/react/plugins/bundle-rollup",
+                "compiler": "babel",
+                "assets": [
+                    {
+                        "glob": "README.md",
+                        "input": "./packages/buttons",
+                        "output": "."
+                    },
+                    {
+                        "glob": "extracted-messages.json",
+                        "input": "./packages/buttons/i18n",
+                        "output": "."
+                    }
+                ]
+            },
+            "dependsOn": [
+                "translate",
+                {
+                    "target": "build",
+                    "projects": [
+                        "core"
+                    ]
+                }
+            ]
+        },
+        "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+            "options": {
+                "jestConfig": "packages/buttons/jest.config.ts"
+            }
+        },
+        "storybook": {
+            "executor": "@nx/storybook:storybook",
+            "options": {
+                "port": 4400,
+                "configDir": "packages/buttons/.storybook"
+            },
+            "configurations": {
+                "ci": {
+                    "quiet": true
+                }
+            }
+        },
+        "build-storybook": {
+            "executor": "@nx/storybook:build",
+            "outputs": ["{options.outputDir}"],
+            "options": {
+                "outputDir": "dist/storybook/buttons",
+                "configDir": "packages/buttons/.storybook"
+            },
+            "configurations": {
+                "ci": {
+                    "quiet": true
+                }
+            }
+        },
+        "test-storybook": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "test-storybook -c packages/buttons/.storybook --url=http://localhost:4400"
+            }
+        },
+        "static-storybook": {
+            "executor": "@nx/web:file-server",
+            "options": {
+                "buildTarget": "buttons:build-storybook",
+                "staticFilePath": "dist/storybook/buttons"
+            },
+            "configurations": {
+                "ci": {
+                    "buildTarget": "buttons:build-storybook:ci"
+                }
+            }
+        }
+    }
+}

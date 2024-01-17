@@ -1,0 +1,28 @@
+{
+  "mui-rff": {
+    "cancel": {
+      "__id__": "mui-rff.cancel",
+      "defaultMessage": "Cancel",
+      "en": "Renunță",
+      "ro": "Renunță"
+    },
+    "create": {
+      "__id__": "mui-rff.create",
+      "defaultMessage": "Create",
+      "en": "Crează",
+      "ro": "Crează"
+    },
+    "reset": {
+      "__id__": "mui-rff.reset",
+      "defaultMessage": "Reset",
+      "en": "Resetează",
+      "ro": "Resetează"
+    },
+    "save": {
+      "__id__": "mui-rff.save",
+      "defaultMessage": "Save",
+      "en": "Salvează",
+      "ro": "Salvează"
+    }
+  }
+}

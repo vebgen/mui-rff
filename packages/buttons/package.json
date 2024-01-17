@@ -1,12 +1,12 @@
 {
-    "name": "@vebgen/mui-rff-date-time",
+    "name": "@vebgen/mui-rff-buttons",
     "version": "0.0.7",
-    "description": "A date-time component that you can use in a React-Final-Form.",
+    "description": "Buttons and button groups that are useful for working with React-Final-Form.",
     "private": false,
     "repository": {
         "type": "git",
         "url": "https://github.com/vebgen/mui-rff.git",
-        "directory": "packages/date-time"
+        "directory": "packages/buttons"
     },
     "bugs": {
         "url": "https://github.com/vebgen/mui-rff/issues"
@@ -19,17 +19,14 @@
         "react-final-form",
         "material-ui",
         "mui",
-        "date-time",
-        "date-time-picker",
-        "date-timepicker"
+        "buttons"
     ],
     "publishConfig": {
         "access": "public",
-        "directory": "../../dist/packages/date-time"
+        "directory": "../../dist/packages/buttons"
     },
     "peerDependencies": {
         "@mui/material": "^5.15.5",
-        "@mui/x-date-pickers": "^6.19.0",
         "@vebgen/mui-rff-core": "0.0.7",
         "core-js": "^3.35.0",
         "react-dom": "18.2.0",

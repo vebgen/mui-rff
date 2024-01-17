@@ -32,11 +32,14 @@ pnpm exec nx generate @nx/react:library \
     --unitTestRunner=jest \
     --bundler=rollup  \
     --component=false \
-    --importPath=@yournamespace/some-name \
+    --importPath=@vebgen/some-name \
+    --projectNameAndRootFormat=derived  \
     --publishable=true  \
     --style=none \
-    --tags="a b c" \
+    --tags="mui" \
     --no-interactive --dry-run
+ pnpm exec nx generate @nx/react:storybook-configuration \
+    --project=some-name --no-interactive --dry-run
 
 # Create a CLI application.
 pnpm exec nx generate @nx/js:library \
@@ -45,7 +48,8 @@ pnpm exec nx generate @nx/js:library \
     --bundler=rollup \
     --directory=apps \
     --publishable=true \
-    --importPath=@vebgen/g11n-cli \
+    --importPath=@vebgen/some-name \
+    --projectNameAndRootFormat=derived  \
     --includeBabelRc=true \
     --testEnvironment=node \
     --no-interactive --dry-run

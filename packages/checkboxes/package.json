@@ -1,6 +1,6 @@
 {
     "name": "@vebgen/mui-rff-checkboxes",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "A component consisting of check-boxes that you can use in a React-Final-Form.",
     "private": false,
     "repository": {
@@ -27,7 +27,7 @@
     },
     "peerDependencies": {
         "@mui/material": "^5.15.5",
-        "@vebgen/mui-rff-core": "0.0.6",
+        "@vebgen/mui-rff-core": "0.0.7",
         "core-js": "^3.35.0",
         "react-dom": "18.2.0",
         "react-final-form": "^6.5.9",

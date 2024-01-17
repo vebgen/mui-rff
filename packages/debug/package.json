@@ -1,7 +1,7 @@
 {
     "name": "@vebgen/mui-rff-debug",
     "description": "Components that may be useful for debugging your react-final-form",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "private": false,
     "repository": {
         "type": "git",
@@ -29,7 +29,7 @@
         "@mui/material": "^5.15.5",
         "@mui/x-date-pickers": "^6.19.0",
         "@textea/json-viewer": "^3.3.0",
-        "@vebgen/mui-rff-core": "0.0.6",
+        "@vebgen/mui-rff-core": "0.0.7",
         "core-js": "^3.35.0",
         "final-form-arrays": "^3.1.0",
         "react-dom": "18.2.0",

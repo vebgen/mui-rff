@@ -18,6 +18,7 @@
             "@vebgen/mui-rff-autocomplete": [
                 "packages/autocomplete/src/index.ts"
             ],
+            "@vebgen/mui-rff-buttons": ["packages/buttons/src/index.ts"],
             "@vebgen/mui-rff-checkboxes": ["packages/checkboxes/src/index.ts"],
             "@vebgen/mui-rff-core": ["packages/core/src/index.ts"],
             "@vebgen/mui-rff-date": ["packages/date/src/index.ts"],

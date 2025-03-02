@@ -74,7 +74,7 @@ export function AutocompleteInner<
         ...rest
     } = props;
 
-    const { helperText, ...lessrest } = rest;
+    const { helperText, ...lessRest } = rest;
     const { variant, ...restTextFieldProps } = textFieldProps || {};
     const { error, submitError } = meta;
     const isError = showError({ meta });
@@ -102,7 +102,7 @@ export function AutocompleteInner<
             | undefined;
 
         if (!getOptionValue) {
-            // If there is no converter function then simpley return the values
+            // If there is no converter function then simply return the values
             // in the RFF field.
             result = value as
                 | AutocompleteValue<T, Multiple, DisableClearable, FreeSolo>
@@ -195,7 +195,7 @@ export function AutocompleteInner<
                     fullWidth={true}
                 />
             )}
-            {...lessrest}
+            {...lessRest}
         />
     );
 }

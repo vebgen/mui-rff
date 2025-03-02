@@ -8,6 +8,7 @@ This project draws its inspiration and a lot of code from
 Following packages are hosted in this repository:
 
 - [@vebgen/mui-rff-autocomplete](./packages/autocomplete/README.md)
+- [@vebgen/mui-rff-buttons](./packages/buttons/README.md)
 - [@vebgen/mui-rff-checkboxes](./packages/checkboxes/README.md)
 - [@vebgen/mui-rff-core](./packages/core/README.md)
 - [@vebgen/mui-rff-date](./packages/date/README.md)

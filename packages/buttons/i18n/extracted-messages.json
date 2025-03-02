@@ -3,25 +3,25 @@
     "cancel": {
       "__id__": "mui-rff.cancel",
       "defaultMessage": "Cancel",
-      "en": "Renunță",
+      "en": "Cancel",
       "ro": "Renunță"
     },
     "create": {
       "__id__": "mui-rff.create",
       "defaultMessage": "Create",
-      "en": "Crează",
+      "en": "Create",
       "ro": "Crează"
     },
     "reset": {
       "__id__": "mui-rff.reset",
       "defaultMessage": "Reset",
-      "en": "Resetează",
+      "en": "Reset",
       "ro": "Resetează"
     },
     "save": {
       "__id__": "mui-rff.save",
       "defaultMessage": "Save",
-      "en": "Salvează",
+      "en": "Save",
       "ro": "Salvează"
     }
   }

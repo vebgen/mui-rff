@@ -241,8 +241,8 @@ importers:
         specifier: 6.13.2
         version: 6.13.2(eslint@8.55.0)(typescript@5.3.3)
       '@vebgen/g11n-cli':
-        specifier: ^0.1.2
-        version: 0.1.2(ts-jest@29.1.2)
+        specifier: ^0.1.11
+        version: 0.1.11(ts-jest@29.1.2)
       babel-jest:
         specifier: ^29.7.0
         version: 29.7.0(@babel/core@7.23.9)
@@ -7814,8 +7814,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vebgen/g11n-cli@0.1.2(ts-jest@29.1.2):
-    resolution: {integrity: sha512-RQ4stEwjYF7msqZddYk/1UF/V5O45FMYaRcdhzZLDEG6MKLTF4P2Zsm2+brXxRW2LsgKAuUtpGRbtJbN40eyQw==}
+  /@vebgen/g11n-cli@0.1.11(ts-jest@29.1.2):
+    resolution: {integrity: sha512-Inyeye3agajK15nzb2Wdjso2mL0phXkOSnewp16iIEx/JdAuN/f8gyDKix0i0KtIekRvs6uWkUrs4eUxpesssQ==}
     hasBin: true
     dependencies:
       '@formatjs/cli-lib': 6.3.6(ts-jest@29.1.2)

@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { JSX, useCallback } from 'react';
 import { Field } from 'react-final-form';
 
 import { AutocompleteProps } from './definitions';

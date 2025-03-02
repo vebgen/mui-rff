@@ -22,7 +22,7 @@ export default storybookConfig;
 // Base for all stories in this file.
 const Template: StoryFn<StoryProps> = (args) => (
     <Form
-        onSubmit={() => { }}
+        onSubmit={() => { console.log("The form has been submitted"); }}
         render={({ handleSubmit }) => (
             <form onSubmit={handleSubmit}>
                 <table>

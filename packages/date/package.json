@@ -30,7 +30,7 @@
   "peerDependencies": {
     "@mui/material": "^6.4.6",
     "@mui/x-date-pickers": "^7.27.1",
-    "@vebgen/mui-rff-core": "0.0.9",
+    "@vebgen/mui-rff-core": "workspace*",
     "core-js": "^3.41.0",
     "react-dom": "19.0.0",
     "react-final-form": "^6.5.9",

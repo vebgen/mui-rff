@@ -319,7 +319,7 @@ importers:
         specifier: ^6.4.6
         version: 6.4.6(@emotion/react@11.14.0)(@emotion/styled@11.14.0)(@types/react@19.0.10)(react-dom@19.0.0)(react@19.0.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.9
+        specifier: workspace*
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.41.0
@@ -341,7 +341,7 @@ importers:
         specifier: ^6.4.6
         version: 6.4.6(@emotion/react@11.14.0)(@emotion/styled@11.14.0)(@types/react@19.0.10)(react-dom@19.0.0)(react@19.0.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.9
+        specifier: workspace*
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.41.0
@@ -363,7 +363,7 @@ importers:
         specifier: ^6.4.6
         version: 6.4.6(@emotion/react@11.14.0)(@emotion/styled@11.14.0)(@types/react@19.0.10)(react-dom@19.0.0)(react@19.0.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.9
+        specifier: workspace*
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.41.0
@@ -407,7 +407,7 @@ importers:
         specifier: ^7.27.1
         version: 7.27.1(@emotion/react@11.14.0)(@emotion/styled@11.14.0)(@mui/material@6.4.6)(@mui/system@6.4.6)(@types/react@19.0.10)(date-fns@4.1.0)(luxon@3.5.0)(react-dom@19.0.0)(react@19.0.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.9
+        specifier: workspace*
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.41.0
@@ -432,7 +432,7 @@ importers:
         specifier: ^7.27.1
         version: 7.27.1(@emotion/react@11.14.0)(@emotion/styled@11.14.0)(@mui/material@6.4.6)(@mui/system@6.4.6)(@types/react@19.0.10)(date-fns@4.1.0)(luxon@3.5.0)(react-dom@19.0.0)(react@19.0.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.9
+        specifier: workspace*
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.41.0
@@ -460,7 +460,7 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1(@emotion/react@11.14.0)(@emotion/styled@11.14.0)(@mui/material@6.4.6)(@types/react@19.0.10)(react-dom@19.0.0)(react@19.0.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.9
+        specifier: workspace*
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.41.0
@@ -485,7 +485,7 @@ importers:
         specifier: ^6.4.6
         version: 6.4.6(@emotion/react@11.14.0)(@emotion/styled@11.14.0)(@types/react@19.0.10)(react-dom@19.0.0)(react@19.0.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.9
+        specifier: workspace*
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.41.0
@@ -507,7 +507,7 @@ importers:
         specifier: ^6.4.6
         version: 6.4.6(@emotion/react@11.14.0)(@emotion/styled@11.14.0)(@types/react@19.0.10)(react-dom@19.0.0)(react@19.0.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.9
+        specifier: workspace*
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.41.0
@@ -529,7 +529,7 @@ importers:
         specifier: ^6.4.6
         version: 6.4.6(@emotion/react@11.14.0)(@emotion/styled@11.14.0)(@types/react@19.0.10)(react-dom@19.0.0)(react@19.0.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.9
+        specifier: workspace*
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.41.0
@@ -551,7 +551,7 @@ importers:
         specifier: ^6.4.6
         version: 6.4.6(@emotion/react@11.14.0)(@emotion/styled@11.14.0)(@types/react@19.0.10)(react-dom@19.0.0)(react@19.0.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.9
+        specifier: workspace*
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.41.0
@@ -576,7 +576,7 @@ importers:
         specifier: ^7.27.1
         version: 7.27.1(@emotion/react@11.14.0)(@emotion/styled@11.14.0)(@mui/material@6.4.6)(@mui/system@6.4.6)(@types/react@19.0.10)(date-fns@4.1.0)(luxon@3.5.0)(react-dom@19.0.0)(react@19.0.0)
       '@vebgen/mui-rff-core':
-        specifier: 0.0.9
+        specifier: workspace*
         version: link:../../dist/packages/core
       core-js:
         specifier: ^3.41.0

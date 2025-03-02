@@ -1,6 +1,6 @@
 {
   "name": "@vebgen/mui-rff-autocomplete",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "An auto-complete component that you can use in a React-Final-Form.",
   "private": false,
   "repository": {

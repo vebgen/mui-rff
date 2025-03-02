@@ -1,6 +1,6 @@
 {
   "name": "@vebgen/mui-rff-radios",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "A component consisting of a group of radio buttons that you can use in a React-Final-Form.",
   "private": false,
   "repository": {

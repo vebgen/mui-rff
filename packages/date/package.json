@@ -1,6 +1,6 @@
 {
   "name": "@vebgen/mui-rff-date",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "A date component that you can use in a React-Final-Form.",
   "private": false,
   "repository": {

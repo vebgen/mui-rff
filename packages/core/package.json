@@ -1,6 +1,6 @@
 {
   "name": "@vebgen/mui-rff-core",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Common code for all packages implementing React-Final-Form components.",
   "private": false,
   "repository": {

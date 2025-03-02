@@ -1,38 +1,38 @@
 {
-    "name": "@vebgen/mui-rff-radios",
-    "version": "0.0.7",
-    "description": "A component consisting of a group of radio buttons that you can use in a React-Final-Form.",
-    "private": false,
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/vebgen/mui-rff.git",
-        "directory": "packages/radios"
-    },
-    "bugs": {
-        "url": "https://github.com/vebgen/mui-rff/issues"
-    },
-    "homepage": "https://github.com/vebgen/mui-rff",
-    "license": "MIT",
-    "keywords": [
-        "react",
-        "react-component",
-        "react-final-form",
-        "material-ui",
-        "mui",
-        "radio",
-        "radio-group",
-        "radio-button"
-    ],
-    "publishConfig": {
-        "access": "public",
-        "directory": "../../dist/packages/radios"
-    },
-    "peerDependencies": {
-        "@mui/material": "^5.15.5",
-        "@vebgen/mui-rff-core": "0.0.7",
-        "core-js": "^3.35.0",
-        "react-dom": "18.2.0",
-        "react-final-form": "^6.5.9",
-        "react": "18.2.0"
-    }
+  "name": "@vebgen/mui-rff-radios",
+  "version": "0.0.9",
+  "description": "A component consisting of a group of radio buttons that you can use in a React-Final-Form.",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vebgen/mui-rff.git",
+    "directory": "packages/radios"
+  },
+  "bugs": {
+    "url": "https://github.com/vebgen/mui-rff/issues"
+  },
+  "homepage": "https://github.com/vebgen/mui-rff",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-component",
+    "react-final-form",
+    "material-ui",
+    "mui",
+    "radio",
+    "radio-group",
+    "radio-button"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "directory": "../../dist/packages/radios"
+  },
+  "peerDependencies": {
+    "@mui/material": "^5.15.5",
+    "@vebgen/mui-rff-core": "0.0.7",
+    "core-js": "^3.35.0",
+    "react-dom": "18.2.0",
+    "react-final-form": "^6.5.9",
+    "react": "18.2.0"
+  }
 }

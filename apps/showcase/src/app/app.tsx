@@ -17,7 +17,9 @@ import {
 import { Form } from 'react-final-form';
 import { FormSubscription } from 'final-form';
 import {
-    StyledEngineProvider, ThemeProvider, createTheme
+    StyledEngineProvider,
+    ThemeProvider,
+    createTheme,
 } from '@mui/material/styles';
 import { createFilterOptions } from '@mui/material/Autocomplete';
 import { styled } from '@mui/system';
@@ -34,7 +36,6 @@ import { TimePicker } from '@vebgen/mui-rff-time';
 import { Text } from '@vebgen/mui-rff-text';
 import { FormDebugger } from '@vebgen/mui-rff-debug';
 
-
 const theme = createTheme({
     components: {
         MuiTextField: {
@@ -50,12 +51,10 @@ const theme = createTheme({
     },
 });
 
-
 const Subscription = styled(Paper)(({ theme }) => ({
     marginTop: theme.spacing(3),
     padding: theme.spacing(3),
 }));
-
 
 /**
  * Little helper to see how good rendering is
@@ -89,7 +88,6 @@ interface FormData {
     lastName: string;
 }
 
-
 export function AppWrapper() {
     return (
         <StyledEngineProvider injectFirst>
@@ -102,52 +100,53 @@ export function AppWrapper() {
 
 function App() {
     const subscription = { submitting: true };
-    const [
-        subscriptionState, setSubscriptionState
-    ] = useState<FormSubscription | undefined>(subscription);
+    const [subscriptionState, setSubscriptionState] = useState<
+        FormSubscription | undefined
+    >(subscription);
 
     const onChange = () => {
         setSubscriptionState(
-            subscriptionState === undefined ? subscription : undefined
+            subscriptionState === undefined ? subscription : undefined,
         );
     };
 
     return (
-        <Box mx={2}>
-            <CssBaseline />
+        <LocalizationProvider dateAdapter={AdapterLuxon}>
+            <Box mx={2}>
+                <CssBaseline />
 
-            <Subscription>
-                <FormControlLabel
-                    control={
-                        <MuiCheckbox
-                            checked={subscriptionState !== undefined}
-                            color="secondary"
-                            onChange={onChange}
-                            value={true}
-                        />
-                    }
-                    label={
-                        "Enable React Final Form subscription render " +
-                        "optimization. Watch the render count when " +
-                        "interacting with the form."
-                    }
-                />
-                <Link
-                    href="https://final-form.org/docs/react-final-form/types/FormProps#subscription"
-                    target="_blank"
-                    underline="hover"
-                >
-                    Documentation
-                </Link>
-            </Subscription>
+                <Subscription>
+                    <FormControlLabel
+                        control={
+                            <MuiCheckbox
+                                checked={subscriptionState !== undefined}
+                                color="secondary"
+                                onChange={onChange}
+                                value={true}
+                            />
+                        }
+                        label={
+                            'Enable React Final Form subscription render ' +
+                            'optimization. Watch the render count when ' +
+                            'interacting with the form.'
+                        }
+                    />
+                    <Link
+                        href="https://final-form.org/docs/react-final-form/types/FormProps#subscription"
+                        target="_blank"
+                        underline="hover"
+                    >
+                        Documentation
+                    </Link>
+                </Subscription>
 
-            <MainForm subscription={subscriptionState} />
+                <MainForm subscription={subscriptionState} />
 
-            <Footer />
-        </Box>
+                <Footer />
+            </Box>
+        </LocalizationProvider>
     );
 }
-
 
 function Footer() {
     return (
@@ -160,8 +159,11 @@ function Footer() {
             >
                 <Toolbar>
                     <Grid
-                        container spacing={1} alignItems="center"
-                        justifyContent="center" direction="row"
+                        container
+                        spacing={1}
+                        alignItems="center"
+                        justifyContent="center"
+                        direction="row"
                     >
                         <Grid item>
                             <Link
@@ -182,10 +184,9 @@ function Footer() {
     );
 }
 
-
 const validate = (values: FormData) => {
     return {};
-}
+};
 
 interface AppAutoData extends AutocompleteData {
     label: string;
@@ -199,9 +200,9 @@ const PaperInner = styled(Paper)(({ theme }) => ({
 }));
 
 function MainForm({ subscription }: { subscription: any }) {
-    const [
-        submittedValues, setSubmittedValues
-    ] = useState<FormData | undefined>(undefined);
+    const [submittedValues, setSubmittedValues] = useState<
+        FormData | undefined
+    >(undefined);
 
     const autocompleteData: AppAutoData[] = [
         { label: 'Earth', value: 'earth' },
@@ -281,10 +282,12 @@ function MainForm({ subscription }: { subscription: any }) {
             required={true}
             options={autocompleteData}
             getOptionValue={(option) => option.value}
-            getOptionLabel={(
-                option: string | AppAutoData
-            ) => (option as AppAutoData).label}
-            renderOption={(props: any, option: AppAutoData) => <li {...props}>{option.label}</li>}
+            getOptionLabel={(option: string | AppAutoData) =>
+                (option as AppAutoData).label
+            }
+            renderOption={(props: any, option: AppAutoData) => (
+                <li {...props}>{option.label}</li>
+            )}
             disableCloseOnSelect={true}
             helperText={helperText}
             freeSolo={true}
@@ -327,12 +330,14 @@ function MainForm({ subscription }: { subscription: any }) {
             required={true}
             options={autocompleteData}
             getOptionValue={(option) => option.value}
-            getOptionLabel={(
-                option: string | AutocompleteData
-            ) => (option as AutocompleteData).label}
+            getOptionLabel={(option: string | AutocompleteData) =>
+                (option as AutocompleteData).label
+            }
             disableCloseOnSelect={true}
             renderOption={(
-                props: any, option: AppAutoData, { selected }: { selected: boolean }
+                props: any,
+                option: AppAutoData,
+                { selected }: { selected: boolean },
             ) =>
                 option.inputValue ? (
                     option.label
@@ -444,7 +449,7 @@ function MainForm({ subscription }: { subscription: any }) {
             label="Pick a date and time (russian locale)"
             name="dateTimeLocale"
             required={true}
-        //locale={ruLocale}
+            //locale={ruLocale}
         />,
         <Text
             key={key++}
@@ -498,9 +503,7 @@ function MainForm({ subscription }: { subscription: any }) {
     ];
 
     return (
-        <LocalizationProvider
-            dateAdapter={AdapterLuxon}
-        >
+        <LocalizationProvider dateAdapter={AdapterLuxon}>
             <Paper sx={{ marginTop: 3, padding: 3, marginBottom: 5 }}>
                 <Form
                     onSubmit={onSubmit}
@@ -517,9 +520,15 @@ function MainForm({ subscription }: { subscription: any }) {
                             autoComplete="new-password"
                         >
                             <Grid container>
-                                <Grid item xs={6}>
+                                <Grid
+                                    item
+                                    xs={6}
+                                >
                                     {formFields.map((field, index) => (
-                                        <Grid item key={index}>
+                                        <Grid
+                                            item
+                                            key={index}
+                                        >
                                             {field}
                                         </Grid>
                                     ))}
@@ -544,11 +553,18 @@ function MainForm({ subscription }: { subscription: any }) {
                                         </Button>
                                     </Grid>
                                 </Grid>
-                                <Grid item xs={6}>
+                                <Grid
+                                    item
+                                    xs={6}
+                                >
                                     <Grid item>
-                                        <Paper sx={{
-                                            ml: 3, mt: 3, p: 3
-                                        }} elevation={3}
+                                        <Paper
+                                            sx={{
+                                                ml: 3,
+                                                mt: 3,
+                                                p: 3,
+                                            }}
+                                            elevation={3}
                                         >
                                             <Typography>
                                                 <strong>Render count:</strong>
@@ -570,26 +586,24 @@ function MainForm({ subscription }: { subscription: any }) {
                                                 <strong>Submitted data</strong>
                                             </Typography>
                                             <pre>
-                                                {
-                                                    JSON.stringify(
-                                                        submittedValues
-                                                            ? submittedValues
-                                                            : {}, undefined, 2
-                                                    )
-                                                }
+                                                {JSON.stringify(
+                                                    submittedValues
+                                                        ? submittedValues
+                                                        : {},
+                                                    undefined,
+                                                    2,
+                                                )}
                                             </pre>
                                         </PaperInner>
                                     </Grid>
                                 </Grid>
                             </Grid>
-
                         </form>
                     )}
                 />
             </Paper>
-        </LocalizationProvider >
+        </LocalizationProvider>
     );
 }
-
 
 export default App;

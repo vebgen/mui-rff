@@ -1,6 +1,6 @@
 {
   "name": "@vebgen/mui-rff-buttons",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Buttons and button groups that are useful for working with React-Final-Form.",
   "private": false,
   "repository": {

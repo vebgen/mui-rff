@@ -1,6 +1,6 @@
 {
   "name": "@vebgen/mui-rff-time",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A time component that you can use in a React-Final-Form.",
   "private": false,
   "repository": {

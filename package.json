@@ -1,6 +1,6 @@
 {
   "name": "@vebgen/mui-rff",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Material-UI components for React Final Form",
   "license": "MIT",
   "private": true,
